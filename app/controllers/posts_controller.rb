@@ -8,8 +8,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    # @post.update(post_params) ? (redirect_to post_path(@post)) : (render :edit)
-    redirect_to post_path(@post) if @post.update(post_params) else render :edit
+    @post.update(post_params) ? (redirect_to post_path(@post)) : (render :edit)
   end
 
   private
